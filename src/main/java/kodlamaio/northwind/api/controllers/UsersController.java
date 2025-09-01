@@ -45,7 +45,7 @@ public class UsersController {
             validationErrors.put(fieldError.getField(), fieldError.getDefaultMessage());
         }
 
-        ErrorDataResult<Object> errors = new ErrorDataResult<Object>(validationErrors, "Doğrulama Hataları");
+        ErrorDataResult<Object> errors = new ErrorDataResult<Object>(validationErrors, "Validation Errors");
         return errors;
     }
 }

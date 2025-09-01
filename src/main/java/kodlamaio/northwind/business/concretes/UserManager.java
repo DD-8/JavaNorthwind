@@ -25,12 +25,12 @@ public class UserManager implements UserService {
     @Override
     public Result add(User user) {
         this.userDao.save(user);
-        return new SuccessResult("Kullanıcı Eklendi.");
+        return new SuccessResult("User Added");
     }
 
     @Override
     public DataResult<User> getByEmail(String email) {
-        return new SuccessDataResult<User>(this.userDao.getByEmail(email), "Kullanıcı Listelendi");
+        return new SuccessDataResult<User>(this.userDao.getByEmail(email), "User Listed");
     }
     
 }
